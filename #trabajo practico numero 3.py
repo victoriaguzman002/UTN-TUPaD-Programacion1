@@ -67,7 +67,7 @@ else:
 #ejercicio7
 
 frase=input("ingrese una frase o palabra")
-if frase and frase [-1].lower()in 'aeiou' or 'AEIOU':
+if frase and frase [-1].lower() in 'aeiou' or 'AEIOU':
     print(frase,"!")
 else:
     print(frase)    
@@ -101,12 +101,30 @@ elif magnitud >= 7:
 
 #ejercicio10
 
-hemisferio=input("ingrese en que hemisferio se encuentra (N/S)")
-mes=int(input("ingrese que mes del año es"))
-dia=int(input("ingrese que dia es"))
-if (dia >= 21 and mes== 12) or ( mes in(1,2))or (mes==3 and dia<=20):
-    if hemisferio == 'norte':
-        print("invierno")
+hemisferio=input("ingrese en que hemisferio se encuentra (N/S)").strip().upper()
+mes=int(input("ingrese que mes del año es (del mes 1 al mes 12)"))
+dia=int(input("ingrese que dia es (del dia 1 al dia 31)"))
+if hemisferio=='N':
+    if (mes==12 and dia>=21) or ( mes in(1,2))or (mes==3 and dia<=20):
+       print(" estas en invierno")
+    elif (mes==3 and dia>=21)or (mes in(4,5))or (mes==6 and dia<=20):
+        print("estas en primavera")
+    elif (mes==6 and dia>=21)or (mes in(7,8)) or (mes==9 and dia<=20) :
+        print("estas en verano")
+    elif (mes==9 and dia>=21) or (mes in (10,11))or (dia<=20 and mes ==12): 
+        print("estas en otoño")
     else:
-        print("verano")    
-
+        print("fecha no valida")    
+elif hemisferio=='S':        
+    if (mes==12 and dia>=21) or ( mes in(1,2))or (mes==3 and dia<=20):
+       print("estas en verano")
+    elif (mes==3 and dia>=21)or (mes in(4,5))or (mes==6 and dia<=20):
+        print("estas en otoño")
+    elif (mes==6 and dia>=21)or (mes in(7,8)) or (mes==9 and dia<=20) :
+        print("estas en invierno")
+    elif (mes==9 and dia>=21) or (mes in (10,11))or (dia<=20 and mes ==12): 
+        print("estas en primavera")
+    else:
+        print("fecha no valida")    
+else:
+    print("por favor, ingrese correctamente el hemisferio")        
