@@ -1,0 +1,146 @@
+#ejercicio1
+
+for num in range(101):
+    print (num)
+
+#ejercicio2
+
+#variable
+numero=(input("ingrese un numero entero: "))
+cantidad= len(numero)
+
+#contar la cantidad de digitos
+for numero in range (cantidad):
+    print(cantidad)
+    break
+
+#ejercicio3
+
+#variables
+num1=int(input("ingrese un numero"))
+num2=int(input("ingrese un segundo numero"))
+
+menor=min(num1, num2)
+mayor=max(num1, num2)
+
+suma=0
+
+#sumar los numeros comprendidos entre los dos valores, exceptuandolos.
+for i in range(menor+1, mayor):
+    suma += i
+print(f"la suma entre {num1} y {num2} excluyendo a estos dos es: {suma}")
+
+#ejercicio4
+
+#definir variables
+
+suma=0
+
+print("ingrese numeros enteros para sumarlos, si desea terminar ingrese 0: ")
+
+#agrego un bucle while para que se sumen los numeros
+
+while True:
+    numeros_enteros=int(input("Numero: "))
+
+    if numeros_enteros ==0:
+        break
+    suma += numeros_enteros
+print(f"la suma de los numeros ingresados es: {suma}")
+
+#ejercicio5
+
+import random
+
+numero_adivinar= random.randint(0,9)
+intentos=0
+
+while True:
+   numero_correcto=int(input("adivina el numero entre el 0 y 9"))
+   intentos +=1
+   if numero_correcto== numero_adivinar:
+       print(f"correcto adivinaste el numero, los intentos fueron: {intentos}")
+       break
+   else:
+       print("incorrecto, vuelva a intentarlo")
+
+#ejercicio6
+
+for num in range (100,-2,-2):
+    print(num)
+
+#ejercicio7
+
+#declarar variables
+suma=0
+numero_ingresado=int(input("ingrese un numero"))
+
+#declaro un bulce for para sumar desde el 0 hasta el numero ingresado
+for y in range(numero_ingresado+1):
+    suma += y
+    
+print (f"la suma de los numeros comprendidos entre 0 y {numero_ingresado} es: {suma}")
+
+#ejercicio8
+
+pares = 0
+impares = 0
+positivos = 0
+negativos = 0
+
+#Cantidad de numeros a ingresar (puede remplazarse por 100)
+cantidad = 5
+
+#Intruccion para el usuario
+print(f"Ingresa {cantidad} numeros enteros: ")
+
+#bucle for 
+for i in range(cantidad):
+    numero = int(input(f"Numero {i + 1}: "))
+    #if para el par o impar
+    if numero % 2 == 0:
+        pares += 1
+    else:
+        impares += 1
+    
+    #if para positivos y negativos
+    if numero > 0:
+        positivos += 1
+    elif numero < 0:
+        negativos += 1
+
+#Mostrar resultados
+print("RESULTADOS:")
+print(f"Pares: {pares}, impares: {impares}, positivos: {positivos}, negativos: {negativos}")
+
+#ejercicio9
+
+#Cantidad de numeros a ingresar (se puede cambiar por 100)
+cantidad1 = 5
+
+#Inicializar suma
+suma3 = 0
+
+#Intruccion para el usuario
+print(f"Ingresa {cantidad1} numeros enteros para calcular la media.")
+
+for a in range(cantidad1):
+    num4 = int(input(f"Numero {a + 1}: "))
+    suma3 += num4
+
+#Calcula la media
+media = suma3 / cantidad1
+
+#Imprime resultado
+print(f"La media de los {cantidad1} numeros ingresados es: {media}")
+
+#ejercicio10
+
+#Pide al usuario ingrese el numero a invertir
+invertir_numero = input("Ingresa un numero entero: ")
+
+#Invierte el numero ingresado por el usuario sin especificar inicio, fin pero si -1 que indica de atras hacia delante.
+invertido = invertir_numero[::-1]
+
+#Imprimir numero invertido.
+print(f"El numero {invertir_numero} ingresado por el usuario, invertido es: {invertido}")
